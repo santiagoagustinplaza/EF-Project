@@ -4,7 +4,8 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<TasksContext> (p => p.UseInMemoryDatabase("DbTasks"));
+//builder.Services.AddDbContext<TasksContext> (p => p.UseInMemoryDatabase("DbTasks"));
+builder.Services.AddNpgsql<TasksContext> (builder.Configuration.GetConnectionString("DbTasks"));
 
 var app = builder.Build();
 
