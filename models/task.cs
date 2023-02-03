@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace efproject.Models;
+namespace EFProject.Models;
 public class Task
 {
     //[Key]
