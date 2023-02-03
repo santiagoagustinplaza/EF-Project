@@ -79,4 +79,5 @@ app.MapDelete("/api/tasks/{id}", async ([FromServices] TasksContext dbContext, [
     return Results.NotFound();
 });
 
+//Run the application
 app.Run();
