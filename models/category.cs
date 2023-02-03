@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace EFProject.Models;
 public class Category
@@ -11,6 +12,6 @@ public class Category
     public string Description { get; set; }
     public int Weight { get; set; }
     public DateTime CreationDate { get; set; }
-
+    [JsonIgnore]
     public virtual ICollection<Task> Tasks{ get; set; }
 }
